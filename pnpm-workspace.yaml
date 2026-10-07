@@ -7,3 +7,12 @@ packages:
 # is only a fallback download, so it stays off.
 allowBuilds:
   unrs-resolver: false
+
+# NativeWind's Babel preset makes every component file import react-native-css-interop's JSX
+# runtime, and that package is a dependency of nativewind, not of the app. pnpm's isolated layout
+# keeps it out of the app's reach ("Unable to resolve react-native-css-interop/jsx-runtime" at
+# the first bundle), so it is hoisted to the root node_modules, where Metro's lookup finds the
+# very copy nativewind uses. Declaring it as a dependency instead would let its version drift
+# from nativewind's on an upgrade.
+publicHoistPattern:
+  - react-native-css-interop
