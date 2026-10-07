@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "apps": [
+    {
+      "id": "mobile",
+      "name": "Mobile",
+      "primary": true,
+      "cwd": "packages/mobile",
+      "command": "pnpm --silent dev",
+      "kind": "expo"
+    }
+  ],
+  "services": [],
+  "envRoots": ["packages/mobile"]
+}

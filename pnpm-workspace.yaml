@@ -1,0 +1,9 @@
+packages:
+  - "packages/*"
+
+# Every dependency with a build script must be listed: pnpm 10 skips an unlisted one
+# silently and pnpm 12 fails the install (ERR_PNPM_IGNORED_BUILDS). unrs-resolver (pulled in
+# by eslint-config-expo's import rules) ships its binary as a platform package and its script
+# is only a fallback download, so it stays off.
+allowBuilds:
+  unrs-resolver: false

@@ -1,0 +1,50 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependencies and build outputs, in any package
+node_modules
+dist
+web-build
+*.tsbuildinfo
+
+# Expo: the dev server's cache and the generated typings
+.expo
+expo-env.d.ts
+.metro-health-check*
+
+# Native folders are generated (continuous native generation): never commit them
+packages/*/ios
+packages/*/android
+.kotlin
+*.orig.*
+
+# Signing material never belongs in the repository
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.pem
+
+# Env files: commit examples only
+.env*
+!.env.example
+
+# pnpm-lock.yaml is the lockfile; keep the other managers' lockfiles out so tooling that
+# detects the manager from lockfiles stays on pnpm.
+package-lock.json
+yarn.lock
+
+# Editor directories and files
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
