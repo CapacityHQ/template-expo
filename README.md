@@ -85,11 +85,13 @@ native generation) from `app.json` and the config plugins, and git ignores them.
 
 `pnpm dev` starts Metro on port 8081 and prints a QR code and the `exp://` address; with
 `--ios` or `--android` (the `ios` and `android` scripts) Expo CLI boots the simulator or the
-emulator, installs the Expo Go of this SDK into it when missing, and opens the app, printing
-`Opening exp://… on <device>` once it has. Inside Capacity the mobile app is supervised from
-`.capacity/runtime.json` (`kind: "expo"`): Capacity runs `pnpm --silent dev` in
-`packages/mobile`, appends the target flag for the device you chose, and keys readiness on that
-line. Every saved file reaches the running app through Fast Refresh; changes to `app.json`,
+emulator, installs the Expo Go of this SDK into it when missing (a 143 MB download the first
+time), and opens the app: it prints `› Opening exp://… on <device>` as soon as it has picked the
+device, and `iOS Bundled <n>ms …` once the device has fetched the bundle, which is when the app
+is up. Inside Capacity the mobile app is supervised from `.capacity/runtime.json`
+(`kind: "expo"`): Capacity runs `pnpm --silent dev` in `packages/mobile`, appends the target
+flag for the device you chose, and treats the `Bundled` line as "the app is up". A Metro that
+restarts while Expo Go still shows the app gets no request until the app reloads. Every saved file reaches the running app through Fast Refresh; changes to `app.json`,
 `babel.config.js`, `metro.config.js` or `tailwind.config.js` need a restart, since Metro caches
 them. Press `r` in the terminal to reload, `j` to open the debugger, `m` for the dev menu.
 
