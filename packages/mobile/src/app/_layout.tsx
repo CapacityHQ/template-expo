@@ -1,6 +1,6 @@
 import '@/global.css'
 
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router'
+import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
 import { NativeTabs } from 'expo-router/unstable-native-tabs'
 import { StatusBar } from 'expo-status-bar'
 
@@ -18,14 +18,11 @@ export default function RootLayout() {
       <NativeTabs>
         <NativeTabs.Trigger name="index">
           <NativeTabs.Trigger.Label>Home</NativeTabs.Trigger.Label>
-          <NativeTabs.Trigger.Icon
-            sf={{ default: 'house', selected: 'house.fill' }}
-            md={{ default: 'home', selected: 'home_filled' }}
-          />
+          <NativeTabs.Trigger.Icon sf="house" md="home" />
         </NativeTabs.Trigger>
         <NativeTabs.Trigger name="settings">
           <NativeTabs.Trigger.Label>Settings</NativeTabs.Trigger.Label>
-          <NativeTabs.Trigger.Icon sf={{ default: 'gearshape', selected: 'gearshape.fill' }} md="settings" />
+          <NativeTabs.Trigger.Icon sf="gearshape" md="settings" />
         </NativeTabs.Trigger>
       </NativeTabs>
     </ThemeProvider>

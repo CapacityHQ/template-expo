@@ -1,7 +1,7 @@
 # Capacity mobile app template
 
 Starter for iPhone and Android apps built with Capacity: a pnpm workspace whose
-`packages/mobile` package is an Expo SDK 57 app (React Native 0.86, React 19.2) with Expo
+`packages/mobile` package is an Expo SDK 55 app (React Native 0.83, React 19.2) with Expo
 Router, native tabs, NativeWind 4 (Tailwind CSS 3 classes), a settings store saved in SQLite,
 light and dark appearance and haptics. It opens as an empty app with Home and Settings, ready
 to build on. Derived from Expo's `create-expo-app` default template (MIT).

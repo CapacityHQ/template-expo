@@ -1,7 +1,7 @@
 # Working in this repository
 
 This is a pnpm workspace. Packages live under `packages/`; the only one today is
-`packages/mobile`, the phone app: Expo SDK 57 (React Native 0.86, React 19.2), Expo Router with
+`packages/mobile`, the phone app: Expo SDK 55 (React Native 0.83, React 19.2), Expo Router with
 native tabs, NativeWind 4 (Tailwind CSS 3 classes on React Native components), zustand for
 state, `expo-sqlite/kv-store` for the settings.
 
@@ -10,7 +10,7 @@ state, `expo-sqlite/kv-store` for the settings.
 Expo ships breaking changes every SDK release; APIs you remember may be renamed, moved or gone.
 Before writing code that touches an Expo, EAS or React Native API, read the major version of
 `expo` in `packages/mobile/package.json` and use the matching docs,
-`https://docs.expo.dev/versions/v<major>.0.0/` (57 today). `https://docs.expo.dev/llms.txt`
+`https://docs.expo.dev/versions/v<major>.0.0/` (55 today). `https://docs.expo.dev/llms.txt`
 indexes every page. Expo's own `AGENTS.md` for this template version says the same.
 
 ## Commands
