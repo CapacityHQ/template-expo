@@ -18,21 +18,6 @@
       "phoneReadyPattern": "^Waiting on http://localhost:\\d+"
     },
     {
-      "sdk": 56,
-      "ref": "sdk-56",
-      "status": "previous",
-      "released": "2026-05-21",
-      "reactNative": "0.85",
-      "react": "19.2",
-      "node": ">=20.19.4",
-      "expoGo": { "ios": "56.0.4", "android": "56.0.4", "iosFloor": "16.4" },
-      "simulator": { "iosRuntime": ">=16.4", "xcode": ">=14.1" },
-      "nativeBuild": { "xcode": ">=26.4", "macos": ">=26.2", "iosDeploymentTarget": "16.4", "easImage": "macos-tahoe-26.4-xcode-26.4" },
-      "readyPattern": "^(iOS|Android) Bundled \\d+ms",
-      "phoneReadyPattern": "^Waiting on http://localhost:\\d+",
-      "knownIssues": ["expo-doctor flags SDK 56's Hermes V1 memory regression (RN 0.85.3, Hermes 250829098.0.10); fixed in SDK 57 / RN 0.86.2"]
-    },
-    {
       "sdk": 55,
       "ref": "sdk-55",
       "status": "oldest",
