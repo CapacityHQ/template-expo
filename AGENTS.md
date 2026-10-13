@@ -70,9 +70,10 @@ Application Logs panel. Run lint and typecheck before declaring a task done.
   does not provide yet.
 - No `ios/` or `android/` folders exist (continuous native generation, `expo prebuild` at build
   time). Never create or edit them; configure native behaviour in `app.json` and config plugins.
-- Identity: `name`, `slug`, `scheme`, `ios.bundleIdentifier` and `android.package` in
-  `app.json` were set by Capacity when the project was created. Never change the last three
-  once the app has been installed anywhere: stores, TestFlight and phones key on them.
+- Identity, in `app.json`: Capacity set `name`, `slug`, `scheme`, `ios.bundleIdentifier` and
+  `android.package` when it created the project. Do not change any of them on your own. The last
+  three can never change once the app has been installed anywhere: stores, TestFlight, phones
+  and links into the app key on them. `name` and `slug` change only when the user asks.
 
 ## Adding a package
 
